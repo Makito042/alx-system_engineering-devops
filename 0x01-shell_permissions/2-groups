@@ -1,0 +1,2 @@
+groups $USER | tr ' ' '\n'
+#!/bin/bash
