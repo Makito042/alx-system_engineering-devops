@@ -1,2 +1,2 @@
-14-copy_html 
+find "$(pwd)/$(basename "$PWD")" -maxdepth 1 -name "*.html" -type f -exec cp -n -u {} . \ 
 #!/bin/bash
