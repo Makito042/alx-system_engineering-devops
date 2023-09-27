@@ -1,4 +1,4 @@
-tes a file in /tmp
+# creates a file in /tmp
 
 file { '/tmp/school':
   content =>'I love Puppet',
@@ -6,3 +6,4 @@ file { '/tmp/school':
   owner   => 'www-data',
   group   => 'www-data',
 }
+
