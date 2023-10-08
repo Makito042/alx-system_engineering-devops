@@ -1,13 +1,6 @@
-# fix request limit at nginx
+#!/usr/bin/env bash
+# script that restores the default server port
 
-exec { 'fix--for-nginx':
-  command => 'sed -i "s/15/4096/" /etc/default/nginx',
-  path    => '/usr/local/bin/:/bin/'
-}
-
-# Restart Nginx
--> exec { 'nginx-restart':
-  command => 'nginx restart',
-  path    => '/etc/init.d/'
-}
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx start
 
